@@ -6,14 +6,14 @@
 
 interface Course {
     name: string;
-    duration: number;
+    duration?: number;
     educator: string;
 }
 
 class CreateCourseService {
     
     execute(data: Course) {
-      const { duration, educator, name } = data;
+      const { duration = 8, educator, name } = data;
       console.log(name, duration, educator);
     }
 }
