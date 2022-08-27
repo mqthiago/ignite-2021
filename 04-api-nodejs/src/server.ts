@@ -5,6 +5,8 @@ import YAML from 'yamljs';
 
 import { router } from './routes';
 
+import './database';
+
 const swaggerDocument = YAML.load(join(__dirname, 'swagger.yml'));
 
 const app = express();
